@@ -113,9 +113,9 @@ void drawEggVisual(){
 
 void spawnEgg(){
     int h=rand()%2;
-    egg_x=basket_x+BASKET_W/2-9; // aligned to basket center
+    egg_x=basket_x+BASKET_W/2-9;
     egg_y=WIN_H-140.0f;
-    egg_type=rand()%3; // skip pink (previously 3)
+    egg_type=rand()%3;
     dropped++;
 }
 
