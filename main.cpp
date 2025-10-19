@@ -143,14 +143,14 @@ void updateFrame(int unused)
 {
   if (!paused && mode == 1)
   {
-    // Move hens
+    
     for (int i = 0; i < 2; i++)
     {
       hen_x[i] += hen_dir[i] * hen_speed[i];
       if (hen_x[i] < 60 || hen_x[i] > WIN_W - 120)
         hen_dir[i] *= -1;
     }
-    // Move egg
+    
     if (egg_y >= 0)
     {
       egg_y -= fall_speed;
@@ -165,7 +165,7 @@ void updateFrame(int unused)
     else if (rand() % 100 < 6)
       spawnEgg();
 
-    // Wind change
+    
     wind_timer++;
     if (wind_timer > 60)
     {
@@ -173,14 +173,14 @@ void updateFrame(int unused)
       wind_timer = 0;
     }
 
-    // Timer countdown
+    
     frameCounter++;
     if (frameCounter >= 60)
-    { // ~1 second
+    { 
       time_left--;
       frameCounter = 0;
       if (time_left <= 0)
-        mode = 0; // game over
+        mode = 0; 
     }
   }
   glutPostRedisplay();
