@@ -12,7 +12,7 @@ int basket_x = 320;
 int BASKET_W = 80, BASKET_H = 30;
 
 float egg_x = -200, egg_y = -200;
-int egg_type = 0; // 0 normal,1 blue,2 gold,3 poop
+int egg_type = 0; 
 
 float hen_x[2] = {120.0f, 480.0f};
 int hen_dir[2] = {1, -1};
@@ -135,7 +135,7 @@ void spawnEgg()
 {
   egg_x = rand() % 2 == 0 ? hen_x[0] : hen_x[1];
   egg_y = WIN_H - 140.0f;
-  egg_type = rand() % 4; // 0=normal,1=blue,2=gold,3=poop
+  egg_type = rand() % 4; 
   dropped++;
 }
 
